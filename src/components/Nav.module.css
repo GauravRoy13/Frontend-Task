@@ -1,0 +1,44 @@
+.nav {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid gray;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav ul li:first-child a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+}
+
+.nav ul li:first-child {
+    margin-right: auto;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+}
+
+.nav li:not(:first-child) {
+    padding: 0 1.5rem;
+}
+
+.nav li:not(:first-child):not(:last-child) {
+    position: relative;
+}
+
+.nav li:not(:first-child):not(:last-child)::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    right: 0;
+}
